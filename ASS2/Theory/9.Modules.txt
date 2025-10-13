@@ -1,0 +1,88 @@
+1. What is a Module in Python?
+-> A module is simply a Python file (.py) that contains functions, variables, or classes which you can reuse in other programs.
+
+Think of a module as a toolbox — you don’t have to rewrite tools; just import and use them.
+
+----------------------------------------------------------------------------------------------------
+
+
+2. Importing Modules
+-> You can use any module by importing it.
+
+Example:
+import math
+
+result = math.sqrt(25)
+print(result)
+
+Output:
+5.0
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Standard Library Modules
+-> Python comes with many built-in modules — ready to use.
+
+Let’s look at two common ones: math and random.
+
+(a) math module :
+Used for mathematical operations.
+
+import math
+
+print("Square root:", math.sqrt(16))
+print("Power:", math.pow(2, 3))
+print("Ceiling:", math.ceil(4.2))
+print("Floor:", math.floor(4.8))
+print("Pi value:", math.pi)
+
+Output:
+Square root: 4.0
+Power: 8.0
+Ceiling: 5
+Floor: 4
+Pi value: 3.141592653589793
+
+(b) random module :
+Used to generate random numbers.
+
+import random
+
+print("Random number between 1 and 10:", random.randint(1, 10))
+print("Random float between 0 and 1:", random.random())
+print("Random choice from list:", random.choice(['Apple', 'Banana', 'Cherry']))
+
+Output:
+Random number between 1 and 10: 7
+Random float between 0 and 1: 0.5231
+Random choice from list: Banana
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+4. Creating a Custom Module
+-> You can create your own module — just write functions in a .py file and import it into another program.
+
+Step 1️: Create a file named mymodule.py
+# mymodule.py
+
+def greet(name):
+    return f"Hello, {name}! Welcome to Python."
+
+def add(a, b):
+    return a + b
+
+Step 2️: Create another file named main.py in the same folder
+# main.py
+
+import mymodule
+
+print(mymodule.greet("Pavan"))
+print("Sum:", mymodule.add(5, 10))
+
+
+Output:
+
+Hello, Pavan! Welcome to Python.
+Sum: 15

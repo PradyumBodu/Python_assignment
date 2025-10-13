@@ -1,0 +1,97 @@
+* Core Python Concepts
+
+1. Python Data Types
+
+-> Python has several built-in data types.
+
+* Integers (int)
+
+Whole numbers (positive or negative, no decimals).
+
+* Floats (float)
+
+Numbers with decimals.
+
+* Strings (str)
+
+Sequence of characters enclosed in quotes.
+
+* Lists (list)
+
+Ordered, mutable (can change), allows duplicates.
+
+* Tuples (tuple)
+
+Ordered, immutable (cannot change after creation).
+
+* Dictionaries (dict)
+
+Key-value pairs, unordered, mutable.
+
+* Sets (set)
+
+Unordered, unique values (no duplicates).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Python Variables and Memory Allocation
+
+-> Variable = name that refers to a value stored in memory.
+
+Python uses dynamic typing → type is decided at runtime.
+
+Variables are stored as objects in memory.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Python Operators
+->  Arithmetic Operators
+
+addition-'+' subtraction-'-' division-'/' module-'%' multiplication-'*' division-'//' power-'**'
+
+* Comparison (Relational) Operators
+
+less-'<' grater-'>' lessorequal-'<=' graterorequal-'>=' equalto-'==' notequalto-'!='
+
+* Logical Operators
+
+'and' 'or' 'not'
+
+* Assignment Operators
+
+a+=10-'+=' a-=10-'-=' a/=10-'/=' a%=10-'%=' a*=10-'*='
+
+* Identity Operators
+
+is - a is b  is not - a is not b
+
+is → returns True if both objects reference the same memory location.
+
+is not → returns True if objects reference different memory locations.
+
+* Membership Operators
+
+in - a in b   not in - a not in b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

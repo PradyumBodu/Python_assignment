@@ -1,0 +1,118 @@
+1. Understanding How Generators Work in Python
+->A generator is a special kind of function that allows you to iterate over data one item at a time, without storing everything in memory.
+
+It’s used when you have large data or you don’t want to store the whole list in memory.
+
+Example: Normal Function vs Generator
+Normal Function (returns a full list)
+def normal_func():
+    result = []
+    for i in range(5):
+        result.append(i)
+    return result
+
+print(normal_func())
+
+Output:
+[0, 1, 2, 3, 4]
+
+Here, the entire list is created and stored in memory before being returned.
+
+Generator Function (uses yield)
+def generator_func():
+    for i in range(5):
+        yield i
+
+for num in generator_func():
+    print(num)
+
+ Output:
+0
+1
+2
+3
+4
+
+Here, the function yields one value at a time, instead of returning all values at once.
+That’s what makes it memory efficient!
+
+---------------------------------------------------------------------------------------------------------------------
+
+2. Difference Between yield and return
+->
+| Feature        | `return`                                | `yield`                                         |
+| -------------- | --------------------------------------- | ----------------------------------------------- |
+| Function type  | Normal function                         | Generator function                              |
+| Returns        | Single value and **stops** the function | One value at a time and **pauses** the function |
+| Memory usage   | High (stores all data)                  | Low (produces data on demand)                   |
+| Used for       | Final result                            | Large or continuous sequences                   |
+| Can be resumed |  No                                     | Yes, resumes from last `yield`                  |
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+3. Understanding Iterators
+-> An iterator is an object that lets you iterate (loop) through values one by one using next().
+
+Any object that supports these two methods is an iterator:
+
+__iter__()
+__next__()
+
+ Example:
+numbers = [10, 20, 30]
+iterator = iter(numbers)
+
+print(next(iterator))  # 10
+print(next(iterator))  # 20
+print(next(iterator))  # 30
+
+
+Output:
+10
+20
+30
+
+iter() converts the list into an iterator.
+next() gives one value at a time.
+
+---------------------------------------------------------------------------------------------------------
+
+4. Creating Custom Iterators
+->You can create your own iterator class by defining:
+
+__iter__(self) → returns the iterator object itself
+
+__next__(self) → returns the next value
+
+Example: Custom Iterator
+class CountUpto:
+    def __init__(self, limit):
+        self.limit = limit
+        self.start = 1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.start <= self.limit:
+            value = self.start
+            self.start += 1
+            return value
+        else:
+            raise StopIteration
+
+# Using the iterator
+for num in CountUpto(5):
+    print(num)
+
+
+Output:
+1
+2
+3
+4
+5
+
+
+The loop automatically calls __next__() until StopIteration is raised.

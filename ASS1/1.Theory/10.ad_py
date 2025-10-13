@@ -1,0 +1,127 @@
+1️. What is Functional Programming?
+-> Functional programming is a programming style where you use functions as first-class citizens.
+
+Focuses on immutable data and pure functions (no side effects).
+
+Key aspects in Python: using functions like variables, higher-order functions, and lambda functions.
+
+Example:
+
+def square(x):
+    return x * x
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(square, numbers))
+print(squared_numbers)
+
+
+Output:
+
+[1, 4, 9, 16, 25]
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+2. Using map(), filter(), and reduce()
+-> map()
+
+Applies a function to every item of an iterable.
+
+Returns a map object (convert to list to see results).
+
+Example:
+
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)
+
+Output:
+[1, 4, 9, 16, 25]
+
+-> filter()
+
+Filters items based on a condition.
+
+Returns a filter object.
+
+Example:
+
+numbers = [1, 2, 3, 4, 5]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+
+Output:
+[2, 4]
+
+-> reduce()
+
+Performs cumulative computation on a list.
+
+Must import from functools.
+
+Example:
+
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+sum_all = reduce(lambda x, y: x + y, numbers)
+print(sum_all)
+
+Output:
+15
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Closures in Python
+
+A closure is a function returned by another function, which remembers the outer function’s variables even after the outer function finishes.
+
+Example:
+
+def outer(x):
+    def inner(y):
+        return x + y
+    return inner
+
+add_five = outer(5)
+print(add_five(10))  # 5 + 10
+
+Output:
+15
+
+
+Explanation:
+inner() remembers x = 5 from outer().
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+4. Decorators in Python
+-> A decorator is a function that takes another function as input and modifies or enhances it without changing its code.
+
+Example:
+
+def decorator(func):
+    def wrapper():
+        print("Before function")
+        func()
+        print("After function")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+Output:
+Before function
+Hello!
+After function
+
+Explanation:
+@decorator applies decorator to say_hello.
+wrapper() adds extra functionality before and after the original function.

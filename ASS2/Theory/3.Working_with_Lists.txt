@@ -1,0 +1,99 @@
+1. Iterating Over a List Using Loops
+-> You can use a for loop or while loop to go through each element of a list.
+
+fruits = ["apple", "banana", "cherry", "date"]
+
+# Using for loop
+print("Using for loop:")
+for fruit in fruits:
+    print(fruit)
+
+# Using while loop
+print("\nUsing while loop:")
+i = 0
+while i < len(fruits):
+    print(fruits[i])
+    i += 1
+
+
+Output:
+
+Using for loop:
+apple
+banana
+cherry
+date
+
+Using while loop:
+apple
+banana
+cherry
+date
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Sorting and Reversing a List
+-> a) sort() – Sorts the list in place (modifies original list)
+numbers = [5, 2, 9, 1, 7]
+numbers.sort()  # ascending by default
+print("Sorted list (ascending):", numbers)
+
+numbers.sort(reverse=True)  # descending
+print("Sorted list (descending):", numbers)
+
+Output:
+Sorted list (ascending): [1, 2, 5, 7, 9]
+Sorted list (descending): [9, 7, 5, 2, 1]
+
+
+b) sorted() – Returns a new sorted list, original remains unchanged
+numbers = [5, 2, 9, 1, 7]
+sorted_numbers = sorted(numbers)
+print("Original list:", numbers)
+print("Sorted list:", sorted_numbers)
+
+Output:
+Original list: [5, 2, 9, 1, 7]
+Sorted list: [1, 2, 5, 7, 9]
+
+
+c) reverse() – Reverses the list in place
+fruits = ["apple", "banana", "cherry", "date"]
+fruits.reverse()
+print("Reversed list:", fruits)
+
+Output:
+Reversed list: ['date', 'cherry', 'banana', 'apple']
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+3. Basic List Manipulations
+-> a) Addition
+fruits.append("elderberry")   # add at end
+fruits.insert(1, "mango")     # add at index 1
+print("After addition:", fruits)
+
+b) Deletion
+fruits.remove("banana")  # remove by value
+fruits.pop(2)            # remove by index
+print("After deletion:", fruits)
+
+c) Updating
+fruits[0] = "apricot"  # update first element
+print("After updating:", fruits)
+
+d) Slicing
+subset = fruits[1:3]    # get elements from index 1 to 2
+print("Sliced part:", subset)
+
+
+Output Example:
+
+After addition: ['date', 'mango', 'cherry', 'apple', 'elderberry']
+After deletion: ['date', 'mango', 'apple', 'elderberry']
+After updating: ['apricot', 'mango', 'apple', 'elderberry']
+Sliced part: ['mango', 'apple']

@@ -1,0 +1,93 @@
+1. Accessing Strings
+-> Strings are sequences of characters — you can access each character using indexing.
+
+Example:
+
+my_str = "Python"
+print(my_str[0])   # Access first character
+print(my_str[3])   # Access 4th character (index starts from 0)
+print(my_str[-1])  # Access last character
+
+
+Output:
+P
+h
+n
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Manipulating Strings
+-> Concatenation (Joining Strings)
+
+Use the + operator to join two or more strings.
+
+Example:
+
+first = "Data"
+second = "Science"
+result = first + " " + second
+print(result)
+
+
+Output:
+
+Data Science
+
+-> Repetition
+
+Use the * operator to repeat a string multiple times.
+
+Example:
+
+word = "Hi! "
+print(word * 3)
+
+
+Output:
+
+Hi! Hi! Hi!
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+3. String Methods (Built-in Functions)
+-> Method	Description	Example	Output
+.upper()	Converts to uppercase	"hello".upper()	"HELLO"
+.lower()	Converts to lowercase	"HELLO".lower()	"hello"
+.title()	Capitalizes each word	"python language".title()	"Python Language"
+.strip()	Removes extra spaces	" data ".strip()	"data"
+.replace(a, b)	Replaces substring	"python".replace("py", "my")	"mython"
+.find("x")	Finds index of substring	"python".find("t")	2
+.count("x")	Counts occurrences	"banana".count("a")	3
+.split()	Splits string into list	"a,b,c".split(",")	['a','b','c']
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+4. String Slicing
+-> Slicing lets you extract a portion (substring) of a string.
+
+Syntax:
+
+string[start:end:step]
+
+
+start → index to begin from (included)
+
+end → index to stop before (excluded)
+
+step → how many characters to skip (optional)
+
+Examples:
+
+text = "PythonProgramming"
+
+print(text[0:6])      # 'Python' (from index 0 to 5)
+print(text[6:])       # 'Programming' (from 6 to end)
+print(text[:6])       # 'Python' (from start to 5)
+print(text[::2])      # 'Pto rgamn' (every 2nd character)
+print(text[::-1])     

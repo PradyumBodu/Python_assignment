@@ -1,0 +1,53 @@
+* Conditional Statements
+
+1. Introduction
+
+Conditional statements allow a program to make decisions based on conditions.
+Python uses if, elif, and else for decision-making.
+
+(i). if Statement
+
+Executes a block of code only if the condition is True.
+
+age=10
+if age > 6:
+    print('age is above 6')
+
+(ii). if–else Statement
+
+Provides an alternative block if the condition is False.
+
+age=18
+if age>18:
+    print('Eligable for voting')
+else:
+    print('Not Eligable for voting')
+
+(iii). if–elif–else Statement
+
+Used when you have multiple conditions.
+Only the first True condition is executed
+
+marks = 50
+if marks>80:
+    print('Bo Jordar')
+elif marks>50:
+    print('Bo Bhari')
+else    
+    print('Ni maja ave')
+
+
+
+2. Nested if–else Conditions
+
+You can place one if inside another.
+
+num = 11
+
+if num>0:
+    if num % 2 == 0:
+        print('Even Number')
+    else:
+        print('Odd Number')
+else:
+    print('Enter above 0 number')

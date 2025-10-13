@@ -1,0 +1,87 @@
+1. Defining Functions in Python
+-> Functions are blocks of reusable code that perform a specific task.
+
+Defined using the def keyword.
+
+# Example of a simple function
+def greet():
+    print("Hello, welcome to Python!")
+
+# Calling the function
+greet()
+
+
+Output:
+
+Hello, welcome to Python!
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Types of Functions
+-> a) Function without parameters and without return value
+def say_hello():
+    print("Hello World!")
+
+say_hello()
+
+
+b) Function with parameters but without return value
+def greet(name):
+    print("Hello", name)
+
+greet("Alice")
+greet("Bob")
+
+
+Output:
+Hello Alice
+Hello Bob
+
+
+
+c) Function without parameters but with return value
+
+def get_pi():
+    return 3.14159
+
+pi_value = get_pi()
+print("Value of pi:", pi_value)
+
+
+d) Function with parameters and with return value
+def add(a, b):
+    return a + b
+
+result = add(5, 7)
+print("Sum:", result)
+
+Output:
+Value of pi: 3.14159
+Sum: 12
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Anonymous Functions (Lambda Functions)
+-> Lambda functions are small, single-line, anonymous functions.
+
+Syntax:
+lambda arguments: expression
+
+Examples
+# Add two numbers
+add = lambda x, y: x + y
+print("Sum using lambda:", add(5, 3))
+
+# Square a number
+square = lambda x: x ** 2
+print("Square using lambda:", square(4))
+
+
+Output:
+
+Sum using lambda: 8
+Square using lambda: 16

@@ -1,0 +1,70 @@
+1. Accessing Tuple Elements Using Indexing
+-> Positive Indexing
+Starts from 0 for the first element.
+
+my_tuple = (10, "Python", 3.14, True, "Data")
+
+# Access elements using positive index
+print("Element at index 0:", my_tuple[0])
+print("Element at index 2:", my_tuple[2])
+print("Element at index 4:", my_tuple[4])
+
+Output:
+Element at index 0: 10
+Element at index 2: 3.14
+Element at index 4: Data
+
+
+Negative Indexing
+Starts from -1 for the last element and goes backward.
+
+# Access elements using negative index
+print("Last element (index -1):", my_tuple[-1])
+print("Third last element (index -3):", my_tuple[-3])
+
+Output:
+Last element (index -1): Data
+Third last element (index -3): 3.14
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+2. Slicing a Tuple
+-> Tuple slicing uses the syntax:
+
+tuple[start:stop:step]
+
+
+start → index to start (inclusive)
+
+stop → index to stop (exclusive)
+
+step → step size (optional, default is 1)
+
+Examples
+my_tuple = (10, "Python", 3.14, True, "Data")
+
+# Slice from index 1 to 4 (excluding 4)
+print("Elements from index 1 to 3:", my_tuple[1:4])
+
+# Slice from start to index 3 (excluding 3)
+print("Elements from start to index 2:", my_tuple[:3])
+
+# Slice from index 2 to end
+print("Elements from index 2 to end:", my_tuple[2:])
+
+# Slice with step 2
+print("Every 2nd element:", my_tuple[::2])
+
+# Reverse the tuple using slicing
+print("Reversed tuple:", my_tuple[::-1])
+
+
+Output:
+
+Elements from index 1 to 3: ('Python', 3.14, True)
+Elements from start to index 2: (10, 'Python', 3.14)
+Elements from index 2 to end: (3.14, True, 'Data')
+Every 2nd element: (10, 3.14, 'Data')
+Reversed tuple: ('Data', True, 3.14, 'Python', 10)

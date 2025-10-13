@@ -1,0 +1,89 @@
+1. Iterating Over a Dictionary
+-> You can loop through a dictionary in multiple ways:
+
+student = {"name": "Alice", "age": 21, "course": "Data Science"}
+
+# a) Iterating over keys
+print("Keys:")
+for key in student:
+    print(key)
+
+# b) Iterating over values
+print("\nValues:")
+for value in student.values():
+    print(value)
+
+# c) Iterating over key-value pairs
+print("\nKey-Value Pairs:")
+for key, value in student.items():
+    print(key, ":", value)
+
+
+Output:
+
+Keys:
+name
+age
+course
+
+Values:
+Alice
+21
+Data Science
+
+Key-Value Pairs:
+name : Alice
+age : 21
+course : Data Science
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Merging Two Lists Into a Dictionary
+-> Suppose we have two lists: one for keys, one for values.
+
+Using zip()
+keys = ["name", "age", "course"]
+values = ["Bob", 22, "Python"]
+
+merged_dict = dict(zip(keys, values))
+print("Merged Dictionary:", merged_dict)
+
+
+Output:
+
+Merged Dictionary: {'name': 'Bob', 'age': 22, 'course': 'Python'}
+
+Using a loop
+merged_dict2 = {}
+for i in range(len(keys)):
+    merged_dict2[keys[i]] = values[i]
+print("Merged Dictionary (loop):", merged_dict2)
+
+
+Output:
+Merged Dictionary (loop): {'name': 'Bob', 'age': 22, 'course': 'Python'}
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+3. Counting Occurrences of Characters in a String
+-> Dictionaries are perfect for counting occurrences of each character:
+
+text = "hello world"
+char_count = {}
+
+for char in text:
+    if char in char_count:
+        char_count[char] += 1
+    else:
+        char_count[char] = 1
+
+print("Character Count:", char_count)
+
+
+Output:
+
+Character Count: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}

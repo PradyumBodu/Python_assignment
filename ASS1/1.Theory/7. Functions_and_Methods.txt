@@ -1,0 +1,197 @@
+1.Defining and Calling Functions in Python
+-> function is a block of reusable code that runs only when you call it.
+It helps you organize, reuse, and simplify your program.
+
+Syntax:
+
+def function_name(parameters):
+    # code block
+    return result  # optional
+
+Example:
+
+def greet():
+    print("Hello, welcome to Python!")
+
+# Calling the function
+greet()
+
+Output:
+Hello, welcome to Python!
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+2.Function Arguments
+-> Functions can take inputs (arguments) in different ways.
+
+a. Positional Arguments
+Order matters.
+
+def add(a, b):
+    print("Sum =", a + b)
+
+add(5, 10)  # a=5, b=10
+
+Output:
+
+Sum = 15
+
+b. Keyword Arguments
+You specify which parameter gets which value (order doesn’t matter).
+
+def student(name, age):
+    print(name, "is", age, "years old")
+
+student(age=21, name="Pavan")
+
+Output:
+
+Pavan is 21 years old
+
+
+c. Default Arguments
+
+You give a default value; it’s used if no value is passed.
+
+def greet(name="User"):
+    print("Hello,", name)
+
+greet()           # uses default
+greet("Pavan")    # overrides default
+
+Output:
+
+Hello, User
+Hello, Pavan
+
+
+d. Variable-Length Arguments
+
+If you don’t know how many arguments will come.
+
+Using `*args` → for many positional arguments:
+
+
+def total(*numbers):
+    print(sum(numbers))
+
+total(1, 2, 3, 4)
+
+Output:
+
+10
+
+
+Using `**kwargs` → for many keyword arguments:
+
+def display(**info):
+    for key, value in info.items():
+        print(key, "=", value)
+
+display(name="Pavan", age=22, course="Python")
+
+Output:
+
+name = Pavan
+age = 22
+course = Python
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+3. Scope of Variables in Python
+
+Scope = where a variable can be accessed.
+
+| Type                | Defined Where         | Accessible Where          | Example                  |
+| ------------------- | --------------------- | ------------------------- | ------------------------ |
+| **Local Variable**  | Inside a function     | Only inside that function | `x` inside a function    |
+| **Global Variable** | Outside all functions | Anywhere in the program   | `x` defined at top level |
+
+Example:
+
+x = 10  # global variable
+
+def show():
+    y = 5  # local variable
+    print("Inside function:", x + y)
+
+show()
+print("Outside function:", x)
+
+Output:
+
+Inside function: 15
+Outside function: 10
+
+To modify a global variable inside a function:
+
+
+x = 5
+
+def update():
+    global x
+    x = 20
+
+update()
+print(x)
+
+Output:
+
+20
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Built-in Methods for Strings, Lists, etc.
+
+Let’s see some commonly used methods
+
+String Methods
+
+| Method      | Description            | Example                    | Output            |
+| ----------- | ---------------------- | -------------------------- | ----------------- |
+| `upper()`   | Converts to uppercase  | `"hello".upper()`          | `"HELLO"`         |
+| `lower()`   | Converts to lowercase  | `"Hi".lower()`             | `"hi"`            |
+| `title()`   | Capitalizes each word  | `"python basics".title()`  | `"Python Basics"` |
+| `replace()` | Replace part of string | `"hello".replace("h","y")` | `"yello"`         |
+| `split()`   | Split into list        | `"a,b,c".split(",")`       | `['a','b','c']`   |
+| `strip()`   | Removes spaces         | `"  hi  ".strip()`         | `"hi"`            |
+| `find()`    | Finds position         | `"hello".find("e")`        | `1`               |
+| `count()`   | Counts occurrences     | `"apple".count("p")`       | `2`               |
+
+
+List Methods
+
+| Method      | Description        | Example              | Result             |
+| ----------- | ------------------ | -------------------- | ------------------ |
+| `append()`  | Add item to end    | `nums.append(10)`    | Adds 10            |
+| `extend()`  | Add multiple items | `nums.extend([4,5])` | Adds 4,5           |
+| `insert()`  | Add at index       | `nums.insert(1, 99)` | Adds 99 at index 1 |
+| `remove()`  | Remove first match | `nums.remove(3)`     | Removes 3          |
+| `pop()`     | Remove by index    | `nums.pop(1)`        | Removes index 1    |
+| `sort()`    | Sort ascending     | `nums.sort()`        | Sorted list        |
+| `reverse()` | Reverse order      | `nums.reverse()`     | Reversed list      |
+| `count()`   | Count value        | `nums.count(2)`      | Number of 2’s      |
+
+
+Tuple Methods
+
+| Method    | Description       | Example      |
+| --------- | ----------------- | ------------ |
+| `count()` | Count occurrences | `t.count(2)` |
+| `index()` | Find index        | `t.index(3)` |
+
+
+
+Dictionary Methods
+
+| Method     | Description      | Example                |
+| ---------- | ---------------- | ---------------------- |
+| `keys()`   | All keys         | `d.keys()`             |
+| `values()` | All values       | `d.values()`           |
+| `items()`  | Key-value pairs  | `d.items()`            |
+| `get()`    | Get value safely | `d.get("name")`        |
+| `update()` | Add/modify pairs | `d.update({"age":25})` |
+| `pop()`    | Remove key       | `d.pop("name")`        |
+

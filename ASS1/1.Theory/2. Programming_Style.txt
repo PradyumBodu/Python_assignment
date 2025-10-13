@@ -1,0 +1,112 @@
+* Programming Style
+
+1. Understanding Python’s PEP 8 Guidelines
+-> PEP = Python Enhancement Proposal
+
+PEP 8 is the official style guide for writing Python code.
+
+Purpose:
+
+	Improve readability
+
+	Maintain consistency across projects
+
+	Make collaboration easier in teams
+
+Example: Instead of
+
+	def add(a,b):return a+b
+
+
+PEP 8 style is:
+
+	def add(a, b):
+    	   return a + b
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Indentation in Python
+
+-> Python uses indentation (spaces) instead of { } like C/Java.
+
+Standard: 4 spaces per indentation level.
+
+ Don’t mix tabs and spaces.
+
+ Example (Correct):
+
+if True:
+    print("Indented with 4 spaces")
+
+
+ Wrong:
+
+if True:
+ print("Only 1 space - not recommended")
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Comments in Python
+
+-> Used to explain code and make it more understandable.
+
+ Single-line comment:
+
+	# 'hello'
+
+ Multi-line comment (using docstring style):
+
+	"""
+	This is a multi-line comment.
+	Useful for documentation.
+	"""
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Naming Conventions in Python (PEP 8)
+
+->Element	Convention	Example
+Variable	snake_case	user_name
+Function	snake_case	get_user_data()
+Class		PascalCase	CustomerProfile
+Constant	UPPER_CASE	MAX_SPEED
+Private var	_snake_case	_cache_value
+Strong private	__snake_case	__token
+Module/Package	snake_case	math_utils.py
+Magic methods	__method__	__init__, __len__
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

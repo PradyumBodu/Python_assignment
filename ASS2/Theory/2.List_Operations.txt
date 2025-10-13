@@ -1,0 +1,76 @@
+1. Common List Operations
+-> a) Concatenation (+)
+Combine two lists using +.
+
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+
+combined = list1 + list2
+print("Concatenated list:", combined)
+
+Output:
+Concatenated list: [1, 2, 3, 'a', 'b', 'c']
+
+
+b) Repetition (*)
+Repeat the elements of a list using *.
+
+numbers = [1, 2, 3]
+repeated = numbers * 3
+print("Repeated list:", repeated)
+
+Output:
+Repeated list: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+
+c) Membership (in)
+Check if an element exists in a list.
+
+fruits = ["apple", "banana", "cherry"]
+
+print("Is 'banana' in list?", "banana" in fruits)
+print("Is 'orange' in list?", "orange" in fruits)
+
+Output:
+Is 'banana' in list? True
+Is 'orange' in list? False
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Common List Methods
+-> a) append() – Add an element to the end of the list
+fruits.append("orange")
+print("After append:", fruits)
+
+Output:
+After append: ['apple', 'banana', 'cherry', 'orange']
+
+
+b) insert() – Add an element at a specific index
+fruits.insert(1, "mango")  # insert "mango" at index 1
+print("After insert:", fruits)
+
+Output:
+After insert: ['apple', 'mango', 'banana', 'cherry', 'orange']
+
+
+c) remove() – Remove first occurrence of an element
+fruits.remove("banana")
+print("After remove:", fruits)
+
+Output:
+After remove: ['apple', 'mango', 'cherry', 'orange']
+
+
+d) pop() – Remove element at a specific index (or last if no index)
+fruits.pop(2)  # remove element at index 2
+print("After pop index 2:", fruits)
+
+fruits.pop()   # remove last element
+print("After pop last element:", fruits)
+
+Output:
+After pop index 2: ['apple', 'mango', 'orange']
+After pop last element: ['apple', 'mango']

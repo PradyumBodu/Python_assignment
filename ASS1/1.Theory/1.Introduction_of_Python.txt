@@ -1,0 +1,71 @@
+* Introduction to Python.
+
+1. Introduction to Python and its Features.
+-> Python is a simple, high-level, interpreted programming language created for ease of use and readability. It is widely used in web development, data science, machine learning, artificial intelligence, scientific computing, automation, and more.
+
+* Features:
+
+(i) Simple & Readable → Syntax close to English.
+
+(ii) High-Level Language → You don’t worry about low-level details like memory management.
+
+(iii) Interpreted → Executes line by line (no need for compilation).
+
+(iv) Object-Oriented → Supports classes, objects, inheritance, and polymorphism.
+
+(v) Cross-Platform → Works on Windows, Linux, macOS.
+
+(vi) Extensive Libraries → Built-in modules + external packages (NumPy, Pandas, Django, etc.).
+
+(vii) Dynamic Typing → No need to declare variable type.
+
+(viii) Large Community Support → Millions of developers worldwide.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. History and Evolution of Python
+
+-> 1980s: Guido van Rossum started developing Python at CWI (Netherlands).
+
+1991: Python 0.9.0 released (with functions, exceptions, and modules).
+
+2000: Python 2.0 released (with list comprehensions, garbage collection).
+
+2008: Python 3.0 released (not backward compatible with Python 2).
+
+Present: Python 3.x is widely used, Python 2 officially ended support in 2020.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Advantages of Using Python Over Other Languages
+
+-> Beginner-Friendly → Easier to learn compared to C++ or Java.
+
+ Faster Development → Fewer lines of code needed.
+
+ Versatile → Suitable for web apps, data science, AI, scripting, etc.
+
+ Huge Library Support → Saves time by reusing existing modules.
+
+ Community Support → Easy to find tutorials, forums, solutions.
+
+ Integration → Works with C, C++, Java, and databases.
+
+ Example: To print “Hello, World!”
+
+C: 7+ lines of code
+
+Java: 5+ lines of code
+
+Python: Only 1 line → print("Hello, World!")
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Writing and Executing Your First Python Program
+
+-> print('hello')

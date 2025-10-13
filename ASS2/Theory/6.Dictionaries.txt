@@ -1,0 +1,97 @@
+1. Introduction to Dictionaries
+-> A dictionary is an unordered collection of items in Python.
+Each item is a key-value pair.
+Dictionaries are defined using curly braces {}.
+
+# Creating a dictionary
+student = {
+    "name": "Alice",
+    "age": 20,
+    "course": "Data Science",
+    "is_enrolled": True
+}
+
+print("Dictionary:", student)
+
+Output:
+Dictionary: {'name': 'Alice', 'age': 20, 'course': 'Data Science', 'is_enrolled': True}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Accessing Dictionary Elements
+-> Use the key to access its value.
+
+print("Student Name:", student["name"])
+print("Student Age:", student["age"])
+
+
+Output:
+
+Student Name: Alice
+Student Age: 20
+
+
+You can also use the get() method:
+
+print("Course:", student.get("course"))
+print("Phone (not present):", student.get("phone"))
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+3. Adding and Updating Elements
+-> Adding a new key-value pair
+student["phone"] = "123-456-7890"
+print("After adding phone:", student)
+
+Updating an existing key
+student["age"] = 21
+print("After updating age:", student)
+
+Output:
+After adding phone: {'name': 'Alice', 'age': 20, 'course': 'Data Science', 'is_enrolled': True, 'phone': '123-456-7890'}
+After updating age: {'name': 'Alice', 'age': 21, 'course': 'Data Science', 'is_enrolled': True, 'phone': '123-456-7890'}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+4. Deleting Elements
+-> # Using del keyword
+del student["is_enrolled"]
+
+# Using pop() method
+phone = student.pop("phone")
+
+print("After deletion:", student)
+print("Removed phone:", phone)
+
+
+Output:
+
+After deletion: {'name': 'Alice', 'age': 21, 'course': 'Data Science'}
+Removed phone: 123-456-7890
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+5. Dictionary Methods
+-> a) keys() – Returns all keys
+print("Keys:", student.keys())
+
+b) values() – Returns all values
+print("Values:", student.values())
+
+c) items() – Returns key-value pairs as tuples
+print("Items:", student.items())
+
+
+Output:
+
+Keys: dict_keys(['name', 'age', 'course'])
+Values: dict_values(['Alice', 21, 'Data Science'])
+Items: dict_items([('name', 'Alice'), ('age', 21), ('course', 'Data Science')])
+
